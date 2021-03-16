@@ -25,6 +25,5 @@ namespace ExampleAppMobileDev
             Console.Out.WriteLine("todos clicked");
             await Navigation.PushModalAsync(page: new NavigationPage(new TodoListPage()));
         }
-
     }
 }
