@@ -10,8 +10,10 @@
         <Label Text="Notes" />
         <Entry Text="{Binding Path=Notes}"
                Placeholder="Enter notes" />
-        <Label Text="IsComplete" />
+        <Label Text="Is Complete" />
         <Switch IsToggled="{Binding Path=IsComplete}" />
+        <Label Text="Is Important"/>
+        <Switch IsToggled="{Binding Path=IsImportant}" />
         <Button Text="Save" 
                 Clicked="OnSaveButtonClicked" />
         <Button Text="Delete"

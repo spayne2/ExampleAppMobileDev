@@ -23,8 +23,10 @@
                                  Orientation="Horizontal">
                         <Label Text="{Binding Name}" 
                                VerticalTextAlignment="Center" />
+                        <Image Source="exclamation_mark.webp"
+                               IsVisible="{Binding IsImportant}" />
                         <Image Source="check.png"
-                               IsVisible="{Binding IsComplete}" />
+                               IsVisible="{Binding IsComplete}" />                        
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
