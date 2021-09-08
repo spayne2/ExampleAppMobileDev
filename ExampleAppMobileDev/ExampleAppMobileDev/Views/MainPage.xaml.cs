@@ -16,12 +16,14 @@ namespace ExampleAppMobileDev
 
         async void onRepButtonClicked(object sender, EventArgs e)
         {
+            //load the repositories page
             Console.Out.WriteLine("Reps clicked");
             await Navigation.PushModalAsync(page: new RepositoryPage(new RepositoryRestService()));
         }
 
         async void onTodoPageClicked(object sender, EventArgs e)
         {
+            //load the todos page
             Console.Out.WriteLine("todos clicked");
             await Navigation.PushModalAsync(page: new NavigationPage(new TodoListPage()));
         }

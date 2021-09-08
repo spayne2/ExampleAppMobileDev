@@ -18,8 +18,10 @@ namespace ExampleAppMobileDev
 
         async void OnButtonClicked(object sender, EventArgs e)
         {
-            Console.Out.WriteLine("Reps clicked");
+            Console.Out.WriteLine("Get Reps clicked");
+            //get list of repositores from the URL
             List<Repository> repositories = await restService.GetRepositoriesAsync(Constants.GitHubReposEndpoint);
+            //send the list to the collectionView
             collectionView.ItemsSource = repositories;
         }
 

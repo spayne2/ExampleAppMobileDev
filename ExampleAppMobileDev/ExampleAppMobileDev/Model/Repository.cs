@@ -3,7 +3,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace ExampleAppMobileDev
-{
+{   //Repository model
     public class Repository
     {
         [JsonPropertyName("name")]

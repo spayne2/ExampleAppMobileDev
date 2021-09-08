@@ -22,17 +22,18 @@ namespace ExampleAppMobileDev
                 WriteIndented = true
             };
         }
-
+        //REST call to get all repositories
         public async Task<List<Repository>> GetRepositoriesAsync(string uri)
         {
             List<Repository> repositories = null;
             try
             {
+                //call the REST url
                 HttpResponseMessage response = await client.GetAsync(uri);
-                if (response.IsSuccessStatusCode)
+                if (response.IsSuccessStatusCode) //if  a successful response is returned
                 {
-                    string content = await response.Content.ReadAsStringAsync();
-                    repositories = JsonSerializer.Deserialize<List<Repository>>(content);
+                    string content = await response.Content.ReadAsStringAsync(); //retrive content from web response
+                    repositories = JsonSerializer.Deserialize<List<Repository>>(content); //deserialize to a collection of repositories
                 }
             }
             catch (Exception ex)
